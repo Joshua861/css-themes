@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 @media only screen and (max-width: 500px) {
   body {
     padding-right: 5%;
@@ -71,21 +71,22 @@ cite,
 ul,
 ol,
 details,
-figcaption, blockquote {
-  font-family: "Merriweather", serif;
+figcaption,
+blockquote {
+  font-family: "Source Serif Pro", serif;
 }
 legend {
   font-weight: bold;
 }
 a {
-  color: #bbbbff;
+  color: #111166;
 }
 body,
 textarea,
 input,
 select {
-  color: white;
-  background-color: #111;
+  color: black;
+  background-color: #f9f9f9;
 }
 button {
   border-radius: 10em;
@@ -131,7 +132,9 @@ img {
 mark {
   padding: 0 0.1em;
 }
-select, option, input {
+select,
+option,
+input {
   padding: 0.2em 0.5em;
   border-radius: 0.5em;
 }
