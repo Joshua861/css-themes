@@ -222,7 +222,6 @@ th:hover
 select:focus {
   outline: none;
 }
-
 select option {
   background-color: #191919;
   color: #fff;
