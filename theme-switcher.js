@@ -24,3 +24,8 @@ themeSelect.addEventListener("change", function() {
   // Save the selected theme to local storage
   localStorage.setItem("selectedTheme", selectedTheme);
 });
+window.addEventListener("load", function() {
+    const overlay = document.querySelector("#overlay");
+    overlay.style.display = "none";
+  });
+  

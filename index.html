@@ -5,97 +5,142 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/modern.css" id="theme-link" />
         <title>Theme Test</title>
-    </head>
-    <body>
-        <select id="theme-select">
-            <option value="modern.css">Modern light theme</option>
-            <option value="neon.css">Dark neon theme</option>
-        </select>
-        <script src="theme-switcher.js"></script>
-        <br>
-        <br>
-        <nav>
-            <a href="/">Home</a>
-        </nav>
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
-        <p>Paragraph | <b>Bold</b> | <strong>Strong</strong> | <i>Idiomatic</i>
-            | <em>Emphasis</em> | <u>Underline</u> | <s>Strikethrough</s> |
-            <mark>Marked</mark> | <code>Code</code> | </p>
-        <a href="http://www.google.com">Link</a>
-        <br>
-        <br>
-        <big>Big</big>
-        <small>Small</small>
-        <br>
-        <br>
-        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-            ut aliquip ex ea commodo consequat. </blockquote>
-        <br>
-        <br>
-        <button>Click Me!</button>
-        <br>
-        <br>
-        <table>
-            <thead>
-                <tr>
-                    <th>Egg Type</th>
-                    <th>Rating (/10)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>Scrambled</th>
-                    <td>8</td>
-                </tr>
-                <tr>
-                    <th>Fried</th>
-                    <td>9</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th>Average</th>
-                    <td>8.5</td>
-                </tr>
-            </tfoot>
-        </table>
-        <br>
-        <br>
-        <textarea placeholder="Type here!" name="area" id="area" cols="30"
-            rows="10"></textarea>
-        <p>
-            <var>a <sup>2</sup>
-            </var> + <var>b <sup>2</sup>
-            </var> = <var>c <sup>2</sup>
-            </var>
-        </p>
-        <details>
-            <summary> I have hands but no arms, what am I? </summary> A clock.
-        </details>
-        <br> C <sub>8</sub>H <sub>10</sub>N <sub>4</sub>O <sub>2</sub>
-        <br>
-        <br>
-        <label for="select">Choose one:</label>
-        <select name="Options" id="select">
-            <option value="">--Select one--</option>
-            <option value="apple">Apple</option>
-            <option value="orange">Orange</option>
-            <option value="banana">Banana</option>
-        </select>
-        <br>
-        <br>
-        <label for="progress">Progress:</label>
-        <progress max="100" value="70"></progress>
-        <br>
-        <br>
-        <pre>
+        <div id="overlay">
+            <div class="loading-message"><svg id="loading"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="48" viewBox="0 96 960 960" width="48"><path d="M196
+                        725q-20-36-28-72.5t-8-74.5q0-131 94.5-225.5T480
+                        258h43l-80-80 39-39 149 149-149 149-40-40 79-79h-41q-107
+                        0-183.5 76.5T220 578q0 29 5.5 55t13.5 49l-43 43Zm280
+                        291L327 867l149-149 39 39-80 80h45q107 0 183.5-76.5T740
+                        577q0-29-5-55t-15-49l43-43q20 36 28.5 72.5T800 577q0
+                        131-94.5 225.5T480 897h-45l80 80-39 39Z"/></svg></div>
+            </div>
+            <style>
+            #overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #ffffff99;
+                z-index: 9999;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            #loading {
+                width: 50vmin;
+                height: 50vmin;
+                animation: spin 2s linear infinite;
+            }
+            @keyframes spin {
+                0% {transform: rotate(0deg);}
+                100% {transform: rotate(360deg);}
+            }
+              
+          </style>
+        </head>
+        <body>
+            <select id="theme-select">
+                <option value="modern.css">Modern light theme</option>
+                <option value="neon.css">Dark neon theme</option>
+                <option value="emoji.css">Emojis</option>
+                <option value="serif.css">Dark serif theme</option>
+            </select>
+            <script src="theme-switcher.js"></script>
+            <br>
+            <br>
+            <nav>
+                <a href="/">Home</a>
+            </nav>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <p>Paragraph | <b>Bold</b> | <strong>Strong</strong> | <i>Idiomatic</i>
+                | <em>Emphasis</em> | <u>Underline</u> | <s>Strikethrough</s> |
+                <mark>Marked</mark> | <code>Code</code> |
+                <a href="http://www.google.com">Link</a>
+                <br>
+                <br>
+                <big>Big</big>
+                <small>Small</small>
+                <br>
+                <br>
+                <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit,
+                    sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                    Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris
+                    nisi
+                    ut aliquip ex ea commodo consequat. </blockquote>
+            </p>
+            <br>
+            <br>
+            <button>Click Me!</button>
+            <br>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Egg Type</th>
+                        <th>Rating (/10)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Scrambled</th>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <th>Fried</th>
+                        <td>9</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Average</th>
+                        <td>8.5</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <br>
+            <br>
+            <textarea placeholder="Type here!" name="area" id="area" cols="30"
+                rows="10"></textarea>
+            <p>
+                <var>a <sup>2</sup>
+                </var> + <var>b <sup>2</sup>
+                </var> = <var>c <sup>2</sup>
+                </var>
+            </p>
+            <details>
+                <summary> I have hands but no arms, what am I? </summary> A
+                clock.
+            </details>
+            <br> C <sub>8</sub>H <sub>10</sub>N <sub>4</sub>O <sub>2</sub>
+            <br>
+            <br>
+            <label for="select">Choose one:</label>
+            <select name="Options" id="select">
+                <option value="">--Select one--</option>
+                <option value="apple">Apple</option>
+                <option value="orange">Orange</option>
+                <option value="banana">Banana</option>
+            </select>
+            <br>
+            <br>
+            <label for="progress">Progress:</label>
+            <progress max="100" value="70"></progress>
+            <br>
+            <br>
+            <pre>
       L          TE
         A       A
           C    V
@@ -113,80 +158,80 @@
         SI      RESPI
                 RER       - Apollinaire
     </pre>
-        <br>
-        <br>
-        <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
-            <input type="range" id="b" name="b" value="50" /> + <input
-                type="number" id="a" name="a" value="10" /> = <output
-                name="result" for="a b">60</output>
-        </form>
-        <br>
-        <br>
-        <label for="meter">Meter:</label>
-        <meter id="meter" min="0" max="100" value="80"></meter>
-        <br>
-        <fieldset>
-            <legend>What is your favourate MK character?</legend>
-            <input id="mario" type="radio">
-            <label for="mario">Mario</label>
-            <br>
-            <input id="luigi" type="radio">
-            <label for="luigi">Luigi</label>
-            <br>
-            <input id="waluwigi" type="radio">
-            <label for="waluwigi">Waluwigi</label>
-        </fieldset>
-        <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>
             <br>
             <br>
-            <del>Delete This</del>
-            <ins>Insert This</ins>
+            <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+                <input type="range" id="b" name="b" value="50" /> + <input
+                    type="number" id="a" name="a" value="10" /> = <output
+                    name="result" for="a b">60</output>
+            </form>
             <br>
             <br>
-            <label for="name">What is your name?</label>
-            <input type="text" id="name">
+            <label for="meter">Meter:</label>
+            <meter id="meter" min="0" max="100" value="80"></meter>
             <br>
-            <hr>
-            <br>
-            <footer>
-                <p>Footer</p>
-            </footer>
-            <figure>
-                <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg"
-                    width=20%>
-                <figcaption>Apple</figcaption>
-            </figure>
-            <br>
-            <br>
-            <cite>Citation</cite>
-            <br>
-            <br>
-            <ol>
-                <li>This</li>
-                <li>is</li>
-                <li>an</li>
-                <li>ordered</li>
-                <li>list</li>
-            </ol>
-            <ul>
-                <li>This</li>
-                <li>is</li>
-                <li>an</li>
-                <li>un-ordered</li>
-                <li>list</li>
-            </ul>
-            <br>
-            <br>
-            <label for="ice-cream-choice">Choose a flavor:</label>
-            <input list="ice-cream-flavors" id="ice-cream-choice"
-                name="ice-cream-choice">
-            <datalist id="ice-cream-flavors">
-                <option value="Chocolate">
-                    <option value="Coconut">
-                        <option value="Mint">
-                            <option value="Strawberry">
-                                <option value="Vanilla">
-                                </datalist>
-                            </body>
-                        </html>
+            <fieldset>
+                <legend>What is your favourate MK character?</legend>
+                <input id="mario" type="radio">
+                <label for="mario">Mario</label>
+                <br>
+                <input id="luigi" type="radio">
+                <label for="luigi">Luigi</label>
+                <br>
+                <input id="waluwigi" type="radio">
+                <label for="waluwigi">Waluwigi</label>
+            </fieldset>
+            <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>
+                <br>
+                <br>
+                <del>Delete This</del>
+                <ins>Insert This</ins>
+                <br>
+                <br>
+                <label for="name">What is your name?</label>
+                <input type="text" id="name">
+                <br>
+                <hr>
+                <br>
+                <footer>
+                    <p>Footer</p>
+                </footer>
+                <figure>
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg"
+                        width=20%>
+                    <figcaption>Apple</figcaption>
+                </figure>
+                <br>
+                <br>
+                <cite>Citation</cite>
+                <br>
+                <br>
+                <ol>
+                    <li>This</li>
+                    <li>is</li>
+                    <li>an</li>
+                    <li>ordered</li>
+                    <li>list</li>
+                </ol>
+                <ul>
+                    <li>This</li>
+                    <li>is</li>
+                    <li>an</li>
+                    <li>un-ordered</li>
+                    <li>list</li>
+                </ul>
+                <br>
+                <br>
+                <label for="ice-cream-choice">Choose a flavor:</label>
+                <input list="ice-cream-flavors" id="ice-cream-choice"
+                    name="ice-cream-choice">
+                <datalist id="ice-cream-flavors">
+                    <option value="Chocolate">
+                        <option value="Coconut">
+                            <option value="Mint">
+                                <option value="Strawberry">
+                                    <option value="Vanilla">
+                                    </datalist>
+                                </body>
+                            </html>
