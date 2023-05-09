@@ -89,7 +89,8 @@ select {
   background-color: #111;
 }
 body {
-  background-image: url('https://raw.githubusercontent.com/Joshua861/css-themes/18d0447bda6c23a9c4e907b5a3edc6ab28ec4946/bg.svg') !important;
+  background-image: url('https://raw.githubusercontent.com/Joshua861/css-themes/8ea5295672e3d45ca65bd8cfd15b880fa27b8510/bg.svg') !important;
+  background-size: cover !important;
 }
 button {
   border-radius: 10em;
