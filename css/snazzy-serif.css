@@ -88,6 +88,9 @@ select {
   color: white;
   background-color: #111;
 }
+body {
+  background-image: url(https://raw.githubusercontent.com/Joshua861/css-themes/3e2623457c4705740043c86cf22acc062d2ca1d5/bg.svg);
+}
 button {
   border-radius: 10em;
   padding: 0.5em 1em;
